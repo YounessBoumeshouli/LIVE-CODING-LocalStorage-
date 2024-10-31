@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple localStorage Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        input, select, button {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #savedMessage {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        .membre {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sauvegarder un message</h1>
+    <form id="form">
+        <input type="text" id="messageInputNom" placeholder="Entrez votre Nom" required>
+        <input type="text" id="messageInputPrenom" placeholder="Entrez votre Prenom" required>
+        <input type="email" id="messageInputEmail" placeholder="Entrez votre Email" required>
+        <select id="messageInputGenre" required>
+            <option value="" disabled selected>Choisissez votre genre</option>
+            <option value="homme">Homme</option>
+            <option value="femme">Femme</option>
+        </select>
+        <button id="saveButton" type="submit">Sauvegarder</button>
+        <p id="savedMessage"></p>
+    </form>
+    <h2>Liste des Membres</h2>
+    <section id="membreList"></section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
